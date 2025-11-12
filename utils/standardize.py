@@ -1,4 +1,4 @@
-# Idea of standardization was originally from PCA, but then built this utility function based from it.
+# Idea of standardization was originally from PCA, but then built this utility function based from it. Sources of example codes and theory below:
 # https://en.wikipedia.org/wiki/Principal_component_analysis
 # https://jonathan-hui.medium.com/machine-learning-singular-value-decomposition-svd-principal-component-analysis-pca-1d45e885e491
 

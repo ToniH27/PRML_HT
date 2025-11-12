@@ -1,4 +1,4 @@
-# Code sources:
+# Code example sources:
 # https://stackoverflow.com/questions/33503993/read-in-all-csv-files-from-a-directory-using-python
 # https://stackoverflow.com/questions/5137497/find-the-current-directory-and-files-directory
 # https://stackoverflow.com/questions/9572490/find-index-of-last-occurrence-of-a-substring-in-a-string

@@ -1,4 +1,4 @@
-# Sources of feature extraction ideas and some codes:
+# Sources of feature extraction ideas and some example codes:
 # https://github.com/yogeshgajjar/logistic_regression/blob/master/logistic_regression_classification.ipynb
 # https://www.geeksforgeeks.org/data-analysis/feature-engineering-for-time-series-data-methods-and-applications/#1-statistical-features
 # https://towardsdatascience.com/applications-of-rolling-windows-for-time-series-with-python-1a4bbe44901d/
