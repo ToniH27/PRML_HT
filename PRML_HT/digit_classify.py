@@ -81,12 +81,14 @@ def feature_extract(X_data):
         x = X_data[i] # Time series data sample
         x_len = len(x) # Length of the sample for indexing
 
+        # Extracts means of the selected intervals
         X.append(np.mean(x[2*x_len//8:3*x_len//8]))
         X.append(np.mean(x[3*x_len//8:4*x_len//8]))
         X.append(np.mean(x[4*x_len//8:5*x_len//8]))
         X.append(np.mean(x[5*x_len//8:6*x_len//8]))
         X.append(np.mean(x[6*x_len//8:7*x_len//8]))
 
+        # Extracts standard deviations of the selected intervals
         X.append(np.std(x[x_len//8:2*x_len//8], ddof=1))
         X.append(np.std(x[2*x_len//8:3*x_len//8], ddof=1))
         X.append(np.std(x[3*x_len//8:4*x_len//8], ddof=1))
@@ -94,26 +96,27 @@ def feature_extract(X_data):
         X.append(np.std(x[5*x_len//8:6*x_len//8], ddof=1))
         X.append(np.std(x[6*x_len//8:7*x_len//8], ddof=1))
 
-        # Extract max-mins of X in 5 subintervals
+        # Extracts max-mins of the selected intervals
         X.append(np.max(x[:x_len//5]) - np.min(x[:x_len//5]))
         X.append(np.max(x[x_len//5:2*x_len//5]) - np.min(x[x_len//5:2*x_len//5]))
         X.append(np.max(x[2*x_len//5:3*x_len//5]) - np.min(2*x[x_len//5:3*x_len//5]))
         X.append(np.max(x[3*x_len//5:4*x_len//5]) - np.min(3*x[x_len//5:4*x_len//5]))
 
+        # Computes skewness values of each spatial coordinate
         skewness = skew(x)
         X.extend(skewness)
 
-        # Area under the curve features
+        # Extracts area under the curve of the selected intervals
         auc1 = np.trapz(x[:,1], x[:, 0], dx=5)
         auc3 = np.trapz(x[:,0], x[:, 2], dx=5)
-
         X.append(auc1) 
         X.append(auc3)
 
+        # Extracts the centroid of X coordinate
         centroid = np.mean(x, axis=0)
-
         X.append(centroid[0]) # xmean
 
+        # Extracts the area under the curve in the selected interval
         X.append(np.trapz(x[:x_len//3, 1], x[:x_len//3, 0], dx=5))
         new_X_train.append(X)
 
