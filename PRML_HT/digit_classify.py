@@ -52,7 +52,7 @@ function.
 def standardize_data(X_data):
     X_data_std = [] # Standardized data
     for X in X_data: # (N,3)!
-        # Standardization Z = (X-µ) / σ for each column
+        # Standardization Z = (X-mu) / sigma for each column
         mu = X.mean(axis=0)
         sigma = X.std(axis=0, ddof=1) # Sample standard deviation
         Z = (X - mu) / sigma
