@@ -1,1 +1,0 @@
-pistin itse manuaalisesti kaiken datan tähän kansioon ja poistin .mat-tiedostot. githubin kanssa ongelmia juuri 1000 tiedoston lataamisen kanssa.
