@@ -52,7 +52,7 @@ def standardize_data(X_data):
 
 
 
-# Function takes the time series data and labels as input
+# Function takes the time series data as an input
 def feature_extract(X_data):
     new_X_train = []
     # Extracting features from the time series data and making a simpler dataset with class labels

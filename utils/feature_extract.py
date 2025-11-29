@@ -140,6 +140,10 @@ def feature_extract(X_data, y_data):
         # aucs = [auc_1, auc_2, auc_3, auc_4, auc_5, auc_6]
         # X.extend(aucs[:])
 
+        # firstLastDist = x[0,:]-x[-1,:] # added euclidian distance
+        # eucDist = np.linalg.norm(firstLastDist)
+        # X.append(eucDist)
+
         # Add a new feature sample to the new dataset
         new_X_train.append(X)
 
