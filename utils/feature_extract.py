@@ -6,7 +6,8 @@
 
 import numpy as np
 import pandas as pd
-from scipy.stats import skew
+# from scipy.stats import skew
+from utils.skew import skew
 from scipy import stats
 from scipy.fftpack import fft
 
