@@ -10,13 +10,19 @@ If you use `conda`, then you can use `conda list` command in CLI or `!conda list
 
 Alternatively, if you use `conda`, then you can create a test environment by using `conda create --name <env_name> python numpy scipy` command if performing testing with CLI or `conda create --name <env_name> python numpy scipy ipykernel` command if you are going to use Jupyter Notebook for testing. Note that, you can define Python version or package versions if you want, but the newest versions are recommended.
 
+Alternatively, you can also initialize the given `conda` test enviroment with `environment.yml` file using command `conda env create -f environment.yml` command in CLI.
+
+To activate the environment you can run `conda activate <env_name>` command in CLI or jut select the correct test environment in Jupyter Notebook kernels list.
+
 After testing, you can remove the testing environment with `conda env remove --name <env_name>` command in CLI.
 
 
-### Running
+### How to use
 
 If you are testing the `digit_classify` function in CLI, then just add needed precodures for predictions at the bottom of the file. If you are testing `digit_classify` in Jupyter Notebook, then import these libraries:
 `import numpy as np`
 `from digit_classify import digit_classify`
 
-Note that, `digit_classify` returns `int` type values for each time series sample prediction.
+
+
+Note that, `digit_classify` takes $N×3$ numpy array matrix as an input and returns `int` type values for each time series sample prediction.
