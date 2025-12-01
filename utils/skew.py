@@ -6,7 +6,12 @@ import numpy as np
 
 # Function computes biased skewness values
 def skew(x):
+    """
+    Function computes skewness values of each data column in numpy matrix array and returns the values as a numpy array
 
+    x: numpy dim(N, M) matrix array
+    returns: numpy (1, M) array
+    """
     N = x.shape[0] # Sample size
     x_mean = np.mean(x, axis=0)
     m3 = np.sum((x - x_mean)**3, axis=0) / N # the biased sample third central moment.
